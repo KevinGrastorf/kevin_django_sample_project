@@ -1,1 +1,1 @@
-web: gunicorn https://kevin-django-project.herokuapp.com/.wsgi --log-file -
+web: gunicorn mysite.wsgi --log-file -

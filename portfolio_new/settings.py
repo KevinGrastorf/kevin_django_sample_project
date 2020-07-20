@@ -76,12 +76,8 @@ WSGI_APPLICATION = 'portfolio_new.wsgi.application'
 
 DATABASES = {
     'default': {
-       "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "postgres",
-        "USER": "kevingrastorf",
-        "PASSWORD": "D3v3lop3r",
-        "HOST": "localhost",
-        "PORT": "5432",
+       'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -130,3 +126,8 @@ MEDIA_ROOT = BASE_DIR
 
 URL_URL = '/url/'
 URL_ROOT = BASE_DIR
+
+import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
+DATABASES['default']['CONN_MAX_AGE'] = 500

@@ -130,7 +130,8 @@ MEDIA_ROOT = BASE_DIR
 URL_URL = '/url/'
 URL_ROOT = BASE_DIR
 
-
+# Activate Django-Heroku.
+django_heroku.settings(locals())
 
 
 

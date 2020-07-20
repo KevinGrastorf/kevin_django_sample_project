@@ -1,0 +1,12 @@
+.name {
+    font-size: 5vw;
+    color: orange;
+    text-shadow: 2px 2px grey;
+}
+#pic {
+    border: 5px solid black;
+}
+
+#back-button {
+    margin-top: 5vh;
+}

@@ -60,7 +60,7 @@
             <div class="container">
                 <h1 class="name">Job Detail</h1>
                 <p class="lead text-muted">{{ job.summary }}</p>
-                <img id="pic" src="{{ job.image.url }}" alt="" height="300">
+                <img id="pic" src="{{ job.image }}" alt="" height="300">
                 <p><a id="back-button" class="btn btn-primary my-2" href="{% url 'Home' %}">Back</a></p>
             </div>
         </section>

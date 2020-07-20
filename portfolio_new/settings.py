@@ -129,5 +129,8 @@ MEDIA_ROOT = BASE_DIR
 
 URL_URL = '/url/'
 URL_ROOT = BASE_DIR
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'jobs/media/images'),
+]
 
 django_heroku.settings(locals())

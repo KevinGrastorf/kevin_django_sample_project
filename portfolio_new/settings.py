@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -27,7 +26,7 @@ SECRET_KEY = 'w_plrq(a8-9fwefj!re8c$p=x2c1(o38$tk1b%qij@$y#cj2#='
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'https://kevin-grastorf-dajngo-sample.herokuapp.com/'
+    'https://kevin-django-project.herokuapp.com/'
 ]
 
 
@@ -130,8 +129,7 @@ MEDIA_ROOT = BASE_DIR
 URL_URL = '/url/'
 URL_ROOT = BASE_DIR
 
-# Activate Django-Heroku.
-django_heroku.settings(locals())
+
 
 
 

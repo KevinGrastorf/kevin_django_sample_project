@@ -1,1 +1,1 @@
-web: gunicorn portfolio_new.wsgi --log-file -
+web: gunicorn kevin-django-project.wsgi --log-file -

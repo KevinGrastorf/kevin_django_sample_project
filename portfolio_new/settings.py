@@ -25,7 +25,7 @@ SECRET_KEY = 'w_plrq(a8-9fwefj!re8c$p=x2c1(o38$tk1b%qij@$y#cj2#='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://kevin-django-project.herokuapp.com/']
 
 
 # Application definition
@@ -76,7 +76,12 @@ WSGI_APPLICATION = 'portfolio_new.wsgi.application'
 
 DATABASES = {
     'default': {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
+       "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": "your_database_name",
+        "USER": "foo",
+        "PASSWORD": "bar",
+        "HOST": "localhost",
+        "PORT": "5432",
     }
 }
 
@@ -125,23 +130,3 @@ MEDIA_ROOT = BASE_DIR
 
 URL_URL = '/url/'
 URL_ROOT = BASE_DIR
-
-# Allow all host hosts/domain names for this site
-ALLOWED_HOSTS = ['*']
-
-# Parse database configuration from $DATABASE_URL
-import dj_database_url
-
-DATABASES = { 'default' : dj_database_url.config()}
-
-# Honor the 'X-Forwarded-Proto' header for request.is_secure()
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-# try to load local_settings.py if it exists
-try:
-  from local_settings import *
-except Exception as e:
-  pass
-
-
-
